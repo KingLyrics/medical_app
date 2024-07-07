@@ -42,7 +42,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           BottomNavigationBarItem(
               icon: Icon(IconlyLight.calendar), label: "Calendar"),
           BottomNavigationBarItem(icon: Icon(IconlyLight.chat), label: "Chat"),
-          BottomNavigationBarItem(icon: Icon(IconlyLight.user), label: "User")
+          BottomNavigationBarItem(icon: Icon(IconlyLight.profile), label: "User")
         ],
       ),
     );
