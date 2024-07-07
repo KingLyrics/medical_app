@@ -10,21 +10,40 @@ class BottomNavBar extends StatefulWidget {
 }
 
 class _BottomNavBarState extends State<BottomNavBar> {
+  final appScreens = [
+    const Text("Home"),
+    const Text("Calendar"),
+    const Text("Chat"),
+    const Text("Person"),
+  ];
+
+  int _selectedIndex = 0;
+
+  void _onItemTapped(int index) {
+   setState(() {
+     _selectedIndex = index;
+   });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppStyles.primary,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(IconlyBold.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(IconlyLight.calendar), label: "Calendar"),
-            BottomNavigationBarItem(icon: Icon(IconlyLight.chat), label: "Chat"),
-            BottomNavigationBarItem(icon: Icon(IconlyLight.user), label: "User")
-          ],
-        ),
+    return Scaffold(
+      body: Center(child: appScreens[_selectedIndex],),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppStyles.primary,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: const [
+          BottomNavigationBarItem(icon: Icon(IconlyBold.home), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(IconlyLight.calendar), label: "Calendar"),
+          BottomNavigationBarItem(icon: Icon(IconlyLight.chat), label: "Chat"),
+          BottomNavigationBarItem(icon: Icon(IconlyLight.user), label: "User")
+        ],
+      ),
     );
   }
 }
