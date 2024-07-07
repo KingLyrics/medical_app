@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'core/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return   MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: "Poppins"),
-      home: const Center(child: Text("Hello")),
+      home:  BottomNavBar(),
     );
   }
 }
