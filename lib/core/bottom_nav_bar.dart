@@ -31,6 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     return Scaffold(
       body: Center(child: appScreens[_selectedIndex],),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
