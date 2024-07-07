@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
+import 'package:medical_appointment/Screens/home_page.dart';
 import 'package:medical_appointment/core/styles/app_styles.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -11,7 +12,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   final appScreens = [
-    const Text("Home"),
+   const HomePage(),
     const Text("Calendar"),
     const Text("Chat"),
     const Text("Person"),
