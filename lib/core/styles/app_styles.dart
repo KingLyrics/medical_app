@@ -1,4 +1,5 @@
-import 'dart:ui';
+
+import 'package:flutter/material.dart';
 
 class AppStyles{
   static Color primary = const Color(0xFF51A8FF);
@@ -7,4 +8,9 @@ class AppStyles{
   static Color lightBlue = const Color(0xFFD4E9FF);
   static Color darkerBlue = const Color(0xFF316599);
   static Color offShadeBlue = const Color(0xFF142A40);
+  static TextStyle bannerStyle = const  TextStyle(
+      fontWeight: FontWeight.w600,
+      color: Colors.white,
+      fontSize: 32
+  );
 }

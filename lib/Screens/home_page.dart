@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:iconly/iconly.dart';
 import 'package:medical_appointment/core/styles/app_styles.dart';
 
@@ -12,15 +13,40 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             width: 100,
             height: 320,
             color: AppStyles.primary,
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(
                   height: 45,
                 ),
                 _welcomeNotification(),
+                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Let's find \nyour top doctor!", style: AppStyles.bannerStyle
+                    ),
+                    Container(
+                      decoration: BoxDecoration(boxShadow: [
+                        BoxShadow(
+                            color: const Color(0xFF1D1617).withOpacity(0.11),
+                            blurRadius: 40,
+                            spreadRadius: 0.0)
+                      ]),
+                      child:  const TextField(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          contentPadding: const EdgeInsets.all(10)
+                        ),
+                      ),
+                    )
+
+                  ],
+                )
               ],
             ),
           ),
@@ -31,7 +57,6 @@ class HomePage extends StatelessWidget {
 
   Container _welcomeNotification() {
     return Container(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
