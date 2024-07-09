@@ -28,6 +28,16 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          Container(
+            padding: const EdgeInsets.only(top: 40, left: 20),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [Text("Categories", style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 20
+              ),)],
+            ),
+          )
         ],
       ),
     );
@@ -35,46 +45,43 @@ class HomePage extends StatelessWidget {
 
   Column bannerAndSearchBar() {
     return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Let's find \nyour top doctor!",
-                      style: AppStyles.bannerStyle),
-                  Container(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: TextField(
-                      textAlignVertical: TextAlignVertical.center,
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Colors.white,
-                        hintText: "Search here...",
-                        hintStyle: const TextStyle(
-                            fontSize: 14,
-                            color: Color(0xFF09121C),
-                            fontWeight: FontWeight.w100),
-                        prefixIcon: const Padding(
-                            padding: EdgeInsets.all(18),
-                            child: Icon(
-                              IconlyLight.search,
-                              color: Color(0xFF09121C),
-                            )),
-                        contentPadding: const EdgeInsets.symmetric(vertical: 10),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(
-                              30), // Set the border radius for enabled state
-                          borderSide:
-                              BorderSide.none, // Remove the border outline
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius:  BorderRadius.circular(30),
-                        // Set the border radius for focused state
-                          borderSide:
-                              BorderSide.none, // Remove the border outline
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              );
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("Let's find \nyour top doctor!", style: AppStyles.bannerStyle),
+        Container(
+          padding: const EdgeInsets.only(top: 20),
+          child: TextField(
+            textAlignVertical: TextAlignVertical.center,
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white,
+              hintText: "Search here...",
+              hintStyle: const TextStyle(
+                  fontSize: 14,
+                  color: Color(0xFF09121C),
+                  fontWeight: FontWeight.w100),
+              prefixIcon: const Padding(
+                  padding: EdgeInsets.all(18),
+                  child: Icon(
+                    IconlyLight.search,
+                    color: Color(0xFF09121C),
+                  )),
+              contentPadding: const EdgeInsets.symmetric(vertical: 10),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(
+                    30), // Set the border radius for enabled state
+                borderSide: BorderSide.none, // Remove the border outline
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                // Set the border radius for focused state
+                borderSide: BorderSide.none, // Remove the border outline
+              ),
+            ),
+          ),
+        )
+      ],
+    );
   }
 
   SizedBox _welcomeNotification() {
