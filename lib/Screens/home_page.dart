@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             width: 100,
-            height: 320,
+            height: 300,
             color: AppStyles.primary,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,21 +31,35 @@ class HomePage extends StatelessWidget {
                         style: AppStyles.bannerStyle),
                     Container(
                       padding: const EdgeInsets.only(top: 20),
-                      child: const TextField(
+                      child: TextField(
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Colors.white,
-                            hintText: "Search here",
-                            hintStyle: const TextStyle(
-                                fontSize: 14,
+                          filled: true,
+                          fillColor: Colors.white,
+                          hintText: "Search here",
+                          hintStyle: const TextStyle(
+                              fontSize: 14,
+                              color: Color(0xFF09121C),
+                              fontWeight: FontWeight.w100),
+                          prefixIcon: const Padding(
+                              padding: EdgeInsets.all(18),
+                              child: Icon(
+                                IconlyLight.search,
                                 color: Color(0xFF09121C),
-                                fontWeight: FontWeight.w100),
-                            prefixIcon: Padding(
-                                padding: EdgeInsets.all(10),
-                                child: Icon(IconlyLight.search)),
-                           contentPadding: EdgeInsets.zero
-
+                              )),
+                          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(
+                                30), // Set the border radius for enabled state
+                            borderSide:
+                                BorderSide.none, // Remove the border outline
+                          ),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius:  BorderRadius.circular(30),
+                          // Set the border radius for focused state
+                            borderSide:
+                                BorderSide.none, // Remove the border outline
+                          ),
                         ),
                       ),
                     )
