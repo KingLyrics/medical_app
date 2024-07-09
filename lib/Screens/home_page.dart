@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 import 'package:medical_appointment/core/styles/app_styles.dart';
@@ -29,15 +28,19 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.only(top: 40, left: 20),
+            padding: const EdgeInsets.only(top: 40, left: 30),
             child: const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text("Categories", style: TextStyle(
+              children: [
+                Text("Categories", style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 20
-              ),)],
+              ),),
+
+              ],
             ),
           )
+
         ],
       ),
     );

@@ -12,7 +12,7 @@ class BottomNavBar extends StatefulWidget {
 
 class _BottomNavBarState extends State<BottomNavBar> {
   final appScreens = [
-   const HomePage(),
+    HomePage(),
     const Text("Calendar"),
     const Text("Chat"),
     const Text("Person"),
